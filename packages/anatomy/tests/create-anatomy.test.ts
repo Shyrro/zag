@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { createAnatomy } from "./create-anatomy"
+import { createAnatomy } from "../src"
 
 describe("Anatomy", () => {
   it("should allow to set parts", () => {
@@ -133,5 +133,19 @@ describe("Anatomy", () => {
     const anatomy = createAnatomy("accordion").parts("root", "control")
     // @ts-expect-error
     expect(() => anatomy.parts("b")).toThrow()
+  })
+
+  it("should return correct keys", () => {
+    const anatomy = createAnatomy("accordion").parts("root", "control")
+    const keys = anatomy.keys()
+
+    expect(keys).toEqual(["root", "control"])
+  })
+
+  it("should return correct keys when extended", () => {
+    const anatomy = createAnatomy("accordion").parts("root", "control").extendWith("part3", "part4")
+    const keys = anatomy.keys()
+
+    expect(keys).toEqual(["root", "control", "part3", "part4"])
   })
 })

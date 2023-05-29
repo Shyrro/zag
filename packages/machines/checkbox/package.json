@@ -1,6 +1,6 @@
 {
   "name": "@zag-js/checkbox",
-  "version": "0.8.0",
+  "version": "0.9.2",
   "description": "Core logic for the checkbox widget implemented as a state machine",
   "keywords": [
     "js",
@@ -17,7 +17,8 @@
   "repository": "https://github.com/chakra-ui/zag/tree/main/packages/checkbox",
   "sideEffects": false,
   "files": [
-    "dist/**/*"
+    "dist",
+    "src"
   ],
   "scripts": {
     "build-fast": "tsup src",

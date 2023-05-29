@@ -29,6 +29,33 @@ type ElementIds = Partial<{
 
 export type SelectionMode = "single" | "multiple" | "range"
 
+export type Offset = {
+  amount: number
+  visibleRange: { start: DateValue; end: DateValue }
+}
+
+export type DayCellProps = {
+  value: DateValue
+  disabled?: boolean
+  offset?: Offset
+}
+
+export type MachineState = {
+  tags: "open" | "closed"
+  value: "idle" | "focused" | "open"
+}
+
+export type GridProps = {
+  view?: DateView
+  columns?: number
+  id?: string
+}
+
+export type CellProps = {
+  disabled?: boolean
+  value: number
+}
+
 type PublicContext = DirectionProperty &
   CommonProperties & {
     /**
@@ -207,19 +234,3 @@ export type MachineContext = PublicContext & PrivateContext & ComputedContext
 export type State = S.State<MachineContext, MachineState>
 
 export type Send = S.Send<S.AnyEventObject>
-
-export type Offset = {
-  amount: number
-  visibleRange: { start: DateValue; end: DateValue }
-}
-
-export type DayCellProps = {
-  value: DateValue
-  disabled?: boolean
-  offset?: Offset
-}
-
-export type MachineState = {
-  tags: "open" | "closed"
-  value: "idle" | "focused" | "open"
-}

@@ -2,19 +2,18 @@ import { mergeProps } from "@zag-js/core"
 import {
   EventKeyMap,
   getEventKey,
+  getEventPoint,
   getNativeEvent,
   isContextMenuEvent,
   isLeftClick,
   isModifiedEvent,
 } from "@zag-js/dom-event"
-import { contains, dataAttr, isEditableElement } from "@zag-js/dom-query"
-import { getPlacementStyles, PositioningOptions } from "@zag-js/popper"
+import { dataAttr, isEditableElement, isSelfEvent } from "@zag-js/dom-query"
+import { PositioningOptions, getPlacementStyles } from "@zag-js/popper"
 import type { NormalizeProps, PropTypes } from "@zag-js/types"
 import { parts } from "./menu.anatomy"
 import { dom } from "./menu.dom"
 import type { Api, GroupProps, ItemProps, LabelProps, OptionItemProps, Send, Service, State } from "./menu.types"
-
-const isSelfEvent = (event: Pick<UIEvent, "currentTarget" | "target">) => contains(event.currentTarget, event.target)
 
 export function connect<T extends PropTypes>(state: State, send: Send, normalize: NormalizeProps<T>) {
   const isSubmenu = state.context.isSubmenu
@@ -95,7 +94,7 @@ export function connect<T extends PropTypes>(state: State, send: Send, normalize
       onPointerDown(event) {
         if (event.pointerType === "mouse") return
         const evt = getNativeEvent(event)
-        const point = { x: evt.clientX, y: evt.clientY }
+        const point = getEventPoint(evt)
         send({ type: "CONTEXT_MENU_START", point })
       },
       onPointerCancel(event) {
@@ -112,7 +111,7 @@ export function connect<T extends PropTypes>(state: State, send: Send, normalize
       },
       onContextMenu(event) {
         const evt = getNativeEvent(event)
-        const point = { x: evt.clientX, y: evt.clientY }
+        const point = getEventPoint(evt)
         send({ type: "CONTEXT_MENU", point })
         event.preventDefault()
       },
@@ -146,9 +145,11 @@ export function connect<T extends PropTypes>(state: State, send: Send, normalize
       onPointerLeave(event) {
         if (event.pointerType !== "mouse") return
         const evt = getNativeEvent(event)
+
         const disabled = dom.isTargetDisabled(event.currentTarget)
         if (disabled || !isSubmenu) return
-        const point = { x: evt.clientX, y: evt.clientY }
+
+        const point = getEventPoint(evt)
         send({ type: "TRIGGER_POINTERLEAVE", target: event.currentTarget, point })
       },
       onClick(event) {

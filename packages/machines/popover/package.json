@@ -1,6 +1,6 @@
 {
   "name": "@zag-js/popover",
-  "version": "0.8.0",
+  "version": "0.9.2",
   "description": "Core logic for the popover widget implemented as a state machine",
   "keywords": [
     "js",
@@ -17,7 +17,8 @@
   "repository": "https://github.com/chakra-ui/zag/tree/main/packages/popover",
   "sideEffects": false,
   "files": [
-    "dist/**/*"
+    "dist",
+    "src"
   ],
   "publishConfig": {
     "access": "public"
@@ -36,7 +37,7 @@
     "@zag-js/popper": "workspace:*",
     "@zag-js/remove-scroll": "workspace:*",
     "@zag-js/types": "workspace:*",
-    "focus-trap": "7.4.0"
+    "focus-trap": "7.4.1"
   },
   "devDependencies": {
     "clean-package": "2.2.0"

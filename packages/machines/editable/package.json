@@ -1,6 +1,6 @@
 {
   "name": "@zag-js/editable",
-  "version": "0.8.0",
+  "version": "0.9.2",
   "description": "Core logic for the editable widget implemented as a state machine",
   "keywords": [
     "js",
@@ -17,7 +17,8 @@
   "repository": "https://github.com/chakra-ui/zag/tree/main/packages/editable",
   "sideEffects": false,
   "files": [
-    "dist/**/*"
+    "dist",
+    "src"
   ],
   "publishConfig": {
     "access": "public"

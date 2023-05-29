@@ -1,6 +1,6 @@
 {
   "name": "@zag-js/vue",
-  "version": "0.7.0",
+  "version": "0.9.2",
   "description": "The vue wrapper for zag",
   "keywords": [
     "ui-machines",
@@ -16,7 +16,8 @@
   "repository": "https://github.com/chakra-ui/zag/tree/main/packages/frameworks/vue",
   "sideEffects": false,
   "files": [
-    "dist/**/*"
+    "dist",
+    "src"
   ],
   "publishConfig": {
     "access": "public"
@@ -31,7 +32,7 @@
   },
   "devDependencies": {
     "@zag-js/utils": "workspace:*",
-    "vue": "3.2.47",
+    "vue": "3.3.2",
     "clean-package": "2.2.0"
   },
   "peerDependencies": {

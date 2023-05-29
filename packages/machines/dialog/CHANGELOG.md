@@ -1,5 +1,47 @@
 # @zag-js/dialog
 
+## 0.9.2
+
+### Patch Changes
+
+- [`f9053c6f`](https://github.com/chakra-ui/zag/commit/f9053c6f138a1614e002b93cb8a817534eaf31e6) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - Fix issue where `setReturnFocus` used in `focus-trap` throws a
+  console error
+
+- Updated dependencies []:
+  - @zag-js/dismissable@0.9.2
+  - @zag-js/anatomy@0.9.2
+  - @zag-js/core@0.9.2
+  - @zag-js/types@0.9.2
+  - @zag-js/aria-hidden@0.9.2
+  - @zag-js/utils@0.9.2
+  - @zag-js/dom-query@0.9.2
+  - @zag-js/remove-scroll@0.9.2
+
+## 0.9.1
+
+### Patch Changes
+
+- [`8469daa1`](https://github.com/chakra-ui/zag/commit/8469daa15fd7f2c0a80869a8715b0342bd3c355f) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - Force release every package to fix regression
+
+- Updated dependencies [[`8469daa1`](https://github.com/chakra-ui/zag/commit/8469daa15fd7f2c0a80869a8715b0342bd3c355f)]:
+  - @zag-js/anatomy@0.9.1
+  - @zag-js/core@0.9.1
+  - @zag-js/types@0.9.1
+  - @zag-js/aria-hidden@0.9.1
+  - @zag-js/utils@0.9.1
+  - @zag-js/dismissable@0.9.1
+  - @zag-js/dom-query@0.9.1
+  - @zag-js/remove-scroll@0.9.1
+
+## 0.9.0
+
+### Patch Changes
+
+- Updated dependencies [[`6274ed5e`](https://github.com/chakra-ui/zag/commit/6274ed5e460400ef7038d2b3b6c1f0ce679ca649)]:
+  - @zag-js/anatomy@0.9.0
+
 ## 0.8.0
 
 ### Patch Changes

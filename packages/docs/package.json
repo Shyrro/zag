@@ -1,6 +1,6 @@
 {
   "name": "@zag-js/docs",
-  "version": "0.5.0",
+  "version": "0.9.2",
   "description": "Docs for zag-js machines",
   "keywords": [
     "ui-machines",
@@ -16,8 +16,8 @@
   "repository": "https://github.com/chakra-ui/zag/tree/main/packages/api-docs",
   "sideEffects": false,
   "files": [
-    "dist/**/*",
-    "api.json"
+    "dist",
+    "src"
   ],
   "scripts": {
     "build-fast": "tsup src",

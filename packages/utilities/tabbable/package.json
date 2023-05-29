@@ -1,6 +1,6 @@
 {
   "name": "@zag-js/tabbable",
-  "version": "0.8.0",
+  "version": "0.9.2",
   "description": "Small utility that returns an array of all* tabbable DOM nodes within a containing node.",
   "keywords": [
     "js",
@@ -14,7 +14,8 @@
   "repository": "https://github.com/chakra-ui/zag/tree/main/packages/utilities/tabbable",
   "sideEffects": false,
   "files": [
-    "dist/**/*"
+    "dist",
+    "src"
   ],
   "scripts": {
     "build-fast": "tsup src",

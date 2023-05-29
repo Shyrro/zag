@@ -1,6 +1,6 @@
 {
   "name": "@zag-js/dom-query",
-  "version": "0.1.4",
+  "version": "0.9.2",
   "description": "The dom helper library for zag.js machines",
   "keywords": [
     "js",
@@ -14,7 +14,8 @@
   "repository": "https://github.com/chakra-ui/zag/tree/main/packages/utilities/dom-helpers",
   "sideEffects": false,
   "files": [
-    "dist/**/*"
+    "dist",
+    "src"
   ],
   "scripts": {
     "build-fast": "tsup src",

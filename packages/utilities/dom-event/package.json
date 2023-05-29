@@ -1,6 +1,6 @@
 {
   "name": "@zag-js/dom-event",
-  "version": "0.8.0",
+  "version": "0.9.2",
   "description": "",
   "keywords": [
     "js",
@@ -14,7 +14,8 @@
   "repository": "https://github.com/chakra-ui/zag/tree/main/packages/utilities/pointer-event",
   "sideEffects": false,
   "files": [
-    "dist/**/*"
+    "dist",
+    "src"
   ],
   "scripts": {
     "build-fast": "tsup src",
